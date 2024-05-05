@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    background: #0B121C;
+}
+html::-webkit-scrollbar{
+    width: 0.5rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 6rem;
+}
+/* header part */
+.navbar{
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.loginimg img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid orange;
+    object-fit: cover;
+    cursor: pointer;
+}
+.logo{
+    user-select: none;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    position: relative;
+    padding: 2px;
+}
+nav ul li a:hover{
+    color: white;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav ul li a::after{
+    background-color: orange;
+    height: 3px;
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -4px;
+    width: 0%;
+    transition: all .3s ease-in-out;
+}
+.menuicon{
+    display: none;
+}
+.crossmark{
+    display: none;
+}
+.loginform{
+    width: 250px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    padding: 10px;
+    height: 250px;
+    border-radius: 10px;
+    right: 0;
+    position: absolute;
+    margin-right: 15px;
+    background-color: #0B121C;
+    display: none;
+    z-index: 100;
+}
+.loginform.activated{
+    display: block;
+}
+.profileimg{
+    display:flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.profileimg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #971597;
+    object-fit: cover;
+    cursor: pointer;
+}
+.linksection{
+    position: absolute;
+    left: 10px;
+}
+.heading{
+    cursor: pointer;
+}
+.linksection span,i{
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+ /* Header dow body part  */
+ 
+.first-row{
+    margin-top: 140px;
+}
+.hp{
+    font-size: 35px;
+    margin-left: 10px;
+}
+.fancy-text{
+    margin-top: 15px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.fancy-text .text{
+    position: relative;
+}
+.first-text{
+    font-size: 30px;
+}
+.sec-text{
+    font-size: 35px;
+    margin: 5px;
+}
+.sec-text::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0B121C;
+    border-left: 2px solid;
+    top: 0;
+    left: 0;
+    animation: animated 4s steps(12) infinite;
+}
+.social i{
+    font-size: 25px;
+    box-shadow: 0px 0px 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+    transition: .2s ease-in-out ;
+}
+.social i:hover{
+    transform: scale(1.08);
+}
+@keyframes animated{
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.middleimg img{
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    margin-left: 260px;
+    border-radius: 50%;
+    margin-top: 130px;
+}
+.iconstart{
+    position: absolute;
+    transform: rotate(calc(360deg/7 * var(--i)));
+    transform-origin: 190px;
+    margin-top: 220px;
+    margin-left: 180px;
+    animation: iconmotion 13s linear infinite;
+    
+}
+@keyframes iconmotion{
+    0%{
+     rotate: 0deg;
+    }
+    100%{
+     rotate: 360deg;
+    }
+ }
+ 
+.iconstart i{
+    font-size: 22px;
+    box-shadow: 0 0 10px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+  
+}
+/* second section AboutMe */
+.allsec{
+    margin-top: 150px;
+}
+.alldeatils{
+    margin-top: 200px;
+}
+.imgpart{
+    margin-top: 100px;
+}
+.imgpart img{
+    width: 300px;
+    height: 350px;
+}
+.linktitle{
+    margin-top: 100px;
+}
+.startnow .bio{
+    color: white;
+    margin: 10px;
+    position: relative;
+    font-size: 18px;
+}
+.startnow .bio.active-bio::after{
+    width: 50%; 
+}
+.startnow .bio::after{
+    position: absolute;
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: orange;
+    bottom: -4px;
+    left: 0;
+}
+.context{
+    display: none;
+}
+.context.activeContext{
+    display: block;
+
+}
+.context li{
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+}
+.allcard{
+    margin-top: 100px;
+}
+.card{
+    background-color: #0B121C;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+.cardDesign{
+    z-index: 1000;
+    color: white;
+}
+.cardDesign i{
+    font-size: 30px;
+    box-shadow:  0 0 10px;
+    border-radius: 50%;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 200%;
+    bottom: 0;
+    margin-bottom: -100px;
+    background: linear-gradient(#00ccff,#d400d4);
+    right: 90px;
+    animation: card 10s linear infinite;
+}
+@keyframes card{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 4px;
+    background: #0B121C;
+    border-radius: 10px;
+}
+.forthSection{
+    margin-top: 50px;
+}
+.Accortional{
+    margin: 10px;
+    border-left: 5px solid #5a085a ;
+
+    
+}
+header{
+    background-color:#0B121C ;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: white;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;height: 50px;
+    transition: all .2s linear;
+}
+header p{
+    line-height: 35px;
+}
+.AccorContent{
+    overflow: hidden;
+    height:0 ;
+  
+}
+.itemCon{
+    color: white;
+    display: flex;
+    line-height: 35px;
+
+}
+.itemCon i{
+    color: #ff4400;
+}
+
+.name{
+    display: flex;
+    
+}
+input{
+    margin: 10px;
+}
+.h3{
+    margin-left: 10px;
+    color: white;
+}
+.Submit{
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.forthSection{
+    margin-top: 200px;
+}
+footer{
+    background-color: #0B121C;
+    box-shadow: 0 0 10px rgba(0, 0, 0,.3);
+    padding: 30px;
+    margin-top: 100px;
+}
+.linkfooter a{
+    color: white;
+    text-decoration: none;
+}
+.Reserves{
+    display: none;
+    padding: 10px;
+    margin-top: 70px;
+}
+hr{
+    color: #9e9e9e81;
+}
+.SliderPart{
+    margin-top: 140px;
+}
+.swiper-slide img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid orange;
+}
+.slidecontent{
+    margin: 50px;
+}
+.slidecontent p{
+    color: white;
+}
+.startcard{
+    margin-left: 120px;
+}
+@media (max-width:360px){
+    html{
+        font-size: 50%;
+    }
+
+    .Reserves{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .contact-us{
+        margin-top: 60px;
+    }
+    .second-row .middleimg img{
+        right: 120px;   
+     }
+     .text.sec-text{
+        font-size: 15px;
+     }
+  .first-row{
+     margin-top: 70px;
+  }
+     .circleicon .iconstart{
+         left: -10px;
+     }
+     header{
+         height: 30px;
+     }
+     .Accortional header{
+        height: 50px;
+    }
+}
+@media (max-width:400px){
+     .second-row .middleimg img{
+       right: 120px;   
+    }
+   .Accortional header{
+        height: 55px;
+    }
+    .startcard{
+        left: -100px;
+      }
+    .Reserves{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .contact-us{
+        margin-top: 60px;
+    }
+ .first-row{
+    margin-top: 115px;
+ }
+    .circleicon .iconstart{
+        left: -10px;
+    }
+    header{
+        height: 30px;
+    }
+}
+@media (max-width:1145px){
+    .text.sec-text{
+        font-size: 20px;
+    }
+}
+@media (max-width:540px){
+    html{
+        font-size:80%;
+    }
+    .Accortional header{
+        height: 55px;
+    }
+    .Reserves{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .allsec h4{
+        display: none;
+    }
+    .imgpart img{
+       display: none;
+    }
+    .alldeatils{
+        margin-left: 30px;
+    }
+
+    .hp{
+        font-size: 30px;
+    }
+    .fancy-text .text.sec-text{
+        font-size: 25px;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        margin-top: 30px;
+        background-color: #0B121C;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        z-index: 100;
+    }
+    nav ul.active{
+        display: block;
+    }
+
+    .loginimg img{
+        display: none;
+    }
+    .menuicon i{
+        display: block;
+        color: #ff4400;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .loginform{
+        width: 210px;
+        height: 210px;
+    }
+    .second-row{
+        top: 150px;
+    }
+    .iconstart{
+    margin-left: 60px;
+    transform-origin: 160px;
+    }
+    .middleimg img{
+    left: -10px;
+    top: 480px;
+    width: 170px;
+    height: 200px;
+    }
+    .card{
+        width: 230px;
+
+    }
+
+}
+@media (max-width:763px){
+
+    html{
+        font-size: 85%;
+    }
+    
+    nav ul{
+        display: none;
+        position: absolute;
+        margin-top: 30px;
+        background-color: #0B121C;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        width: 100%;
+        left: 0;
+        padding: 20px;
+    }
+    nav ul.active{
+        display: block;
+    }
+    .crossmark{
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom:200px;
+        margin-right: 20px;
+        color: orangered;
+        cursor: pointer;
+    }
+    .loginimg img{
+        display: none;
+    }
+    .menuicon{
+        display: block;
+        color: #ff4400;
+        font-size: 22px;
+    }
+        .second-row{
+            top: 150px;
+        }
+      .iconstart{
+        margin-left: 50px;
+      }
+      .linktitle{
+        margin-top: 100px;
+      }
+        .middleimg img{
+        margin-left: 140px;
+        top: 480px;
+        width: 170px;
+        height: 200px;
+        }
+   
+        .imgpart img{
+            display: none;
+        }
+    }
+    @media (max-width:864px){
+        html{
+            font-size: 95%;
+        }
+        .fancy-text .text.sec-text{
+            font-size: 20px;
+        }
+    }
+    @media (max-width:842px){
+        html{
+            font-size: 95%;
+        }
+      .fancy-text .text.sec-text{
+        font-size: 20px;
+      }
+    }
+    @media (max-width:1091px){
+        html{
+            font-size: 95%;
+        }
+        .fancy-text .text.sec-text{
+            font-size: 25px;
+        }
+
+    }
+    @media (max-width:412px){
+        .first-text .text.sec-text{
+            font-size: 10px;
+        }
+        .startcard{
+            margin-left: -5px;
+        }
+        .contact-us{
+            margin-top: 60px;
+        }
+        .Accortional header{
+            height: 55px;
+        }
+        .Reserves{
+            display: block;
+        }
+        footer{
+            display: none;
+        }
+      .first-row{
+        margin-top: 115px;
+      }
+        .allcard .card{
+            left: 70px;
+           
+        }
+        .second-row{
+            left: 70px;
+        }
+        .circleicon .iconstart{
+            left: -10px;
+        }
+        .middleimg img{
+            left: -30px;
+        }
+    }
+@media (max-width:227px){
+    .hp{
+        font-size: 20px;
+
+    }
+
+    .Accortional header{
+        height: 55px;
+    }
+    .Reserves{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .contact-us{
+        margin-top: 60px;
+    }
+    .first-text{
+        font-size: 10px;
+    }
+    .fancy-text .text.sec-text{
+        font-size: 10px;
+    }
+    .social i{
+        font-size:10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+}
+@media (max-width:303px){
+    .hp{
+        font-size: 20px;
+    }
+.startcard{
+    margin-right: 15px;
+}
+    .Accortional header{
+        height: 55px;
+    }
+    .Reserves{
+        display: block;
+    }
+    footer{
+        display: none;
+    }
+    .contact-us{
+        margin-top: 100px;
+    }
+    .first-text{
+        font-size: 20px;
+    }
+    .fancy-text .text.sec-text{
+        font-size: 15px;
+    }
+    .social i{
+        font-size:10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+}
